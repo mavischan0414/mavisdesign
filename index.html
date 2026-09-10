@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavis Chan - Illustration Portfolio</title>
+    <style>
+        /* CSS 變數設定 */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-light: #777777;
+            --accent-color: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 頂部介紹區塊 */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* 專長標籤 */
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            border: 1px solid #eaeaea;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* 瀑布流作品展示區 */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+        }
+
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 24px;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f8f8f8;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* 圖片懸停特效 */
+        .masonry-item:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+        /* 底部聯絡區塊 */
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        footer h3 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .guarantees {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            letter-spacing: 1px;
+        }
+
+        .guarantees span.dot {
+            color: #444;
+            font-size: 1.2rem;
+        }
+
+        /* 純文字聯絡資訊 */
+        .contact-info {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+        }
+
+        /* 響應式設計 (手機與平板適配) */
+        @media (max-width: 992px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (max-width: 600px) {
+            .masonry-grid { column-count: 1; }
+            header { padding: 60px 20px 40px; }
+            h1 { font-size: 2.5rem; }
+            .gallery-container { padding: 0 20px 60px; }
+            .contact-info { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部簡介 -->
+    <header>
+        <h1>Mavis Chan</h1>
+        <h2>Illustrator & Visual Designer</h2>
+        <div class="tags">
+            <span class="tag">City & Travel Maps</span>
+            <span class="tag">Packaging Design</span>
+            <span class="tag">Children's Books</span>
+            <span class="tag">Character Design</span>
+        </div>
+    </header>
+
+    <!-- 瀑布流藝廊 -->
+    <div class="gallery-container">
+        <div class="masonry-grid">
+            <div class="masonry-item"><img src="FtNTyXdNPsSe_RkVBNzLOr-0b_lR.jpg" alt="Animal Characters"></div>
+            <div class="masonry-item"><img src="FmJ-W3dxG-VoS3j4kQApgqVd1V9G_2950.jpg" alt="City Street Illustration"></div>
+            <div class="masonry-item"><img src="Fph_a7lJnsePvMyErnnZUf2Zdxn_.jpg" alt="Forest Story"></div>
+            <div class="masonry-item"><img src="FvLFlZFe5bll45rt6CL325aSUCzj_4822.jpg" alt="Cow Delivery"></div>
+            <div class="masonry-item"><img src="FlcwnvB8m7qOdVkJkyammwDYx2LC.jpg" alt="Children Illustration"></div>
+            <div class="masonry-item"><img src="Fi8UHlefX9YKzF-o4eqiLXgPT_bF.jpg" alt="Duck Character"></div>
+            <div class="masonry-item"><img src="FjwSzapG1CZ_7-D0Quo-fUDlxBm3_0647.jpg" alt="Hotpot Design"></div>
+            <div class="masonry-item"><img src="FkHDEHt21NelAONQ-9pj1JCtQvaW.jpg" alt="Painter Illustration"></div>
+            <div class="masonry-item"><img src="FgESoch8udtmvhHBrrPvlC-Bm9yG.jpg" alt="Rainy Day Illustration"></div>
+            <div class="masonry-item"><img src="FtsbhH33jHOjYuq6Ghhr85K9bcxa_1753.jpg" alt="Honey and Bee Illustration"></div>
+            <div class="masonry-item"><img src="FmzQXfOdXzOufV4TF8-CYX9pLEyI_1700.jpg" alt="Ice Cream Shop Illustration"></div>
+        </div>
+    </div>
+
+    <!-- 底部聯絡區塊 -->
+    <footer>
+        <h3>Let's Create Together</h3>
+        <div class="guarantees">
+            <span>Fast Turnaround</span>
+            <span class="dot">•</span>
+            <span>Consistent Quality</span>
+            <span class="dot">•</span>
+            <span>Commercial Use</span>
+            <span class="dot">•</span>
+            <span>Unlimited Revisions</span>
+        </div>
+        
+        <!-- 純文字聯絡資訊 -->
+        <div class="contact-info">
+            <p>Email: mavischan0414@gmail.com</p>
+            <p>Phone: +852 9146 1924</p>
+        </div>
+    </footer>
+
+</body>
+</html>
